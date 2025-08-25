@@ -19,7 +19,7 @@ function allowRequest(clientId) {
                 capacity: 1
             };
             return true;
-        } else if (userData[clientId].capacity < capacity && diffTime < (windowInSeconds * 1000)) {
+        } else if (userData[clientId].capacity < capacity) {
             //console.log(clientId, " user exists and capacity is not full and below window time thus allow")
             userData[clientId]["capacity"]++;
             return true;
